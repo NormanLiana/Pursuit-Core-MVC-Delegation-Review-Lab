@@ -11,13 +11,18 @@ import UIKit
 class FontSizeViewController: UIViewController {
     
     @IBOutlet weak var fontSlider: UISlider!
-    
     @IBOutlet weak var fontStepper: UIStepper!
     
     
     @IBAction func fontChanged(_ sender: Any) {
         if sender is UISlider {
-            
+          fontStepper.value = Double(fontSlider.value)
+            print(fontStepper.value)
+            print(fontSlider.value)
+        } else {
+            fontSlider.value = Float(fontStepper.value)
+            print(fontStepper.value)
+            print(fontSlider.value)
         }
         
         
