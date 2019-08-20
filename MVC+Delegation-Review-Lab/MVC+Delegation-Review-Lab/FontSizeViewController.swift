@@ -9,7 +9,21 @@
 import UIKit
 
 class FontSizeViewController: UIViewController {
-
+    
+    @IBOutlet weak var fontSlider: UISlider!
+    
+    @IBOutlet weak var fontStepper: UIStepper!
+    
+    
+    @IBAction func fontChanged(_ sender: Any) {
+        if sender is UISlider {
+            
+        }
+        
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

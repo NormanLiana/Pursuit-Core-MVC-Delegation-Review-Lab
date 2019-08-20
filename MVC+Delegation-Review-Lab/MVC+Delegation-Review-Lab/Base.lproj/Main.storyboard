@@ -77,10 +77,16 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="77y-rs-kAK">
                                 <rect key="frame" x="148" y="364" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fontChanged:" destination="6QG-xV-P8a" eventType="valueChanged" id="YEJ-On-nfs"/>
+                                </connections>
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="y6t-iN-u5u">
                                 <rect key="frame" x="160" y="500" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fontChanged:" destination="6QG-xV-P8a" eventType="valueChanged" id="ugB-nu-wW4"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Table View Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQW-jW-w8m">
                                 <rect key="frame" x="43" y="219" width="329" height="54"/>
@@ -93,6 +99,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="r6h-rh-N7C"/>
                     </view>
+                    <connections>
+                        <outlet property="fontSlider" destination="77y-rs-kAK" id="OdE-H0-ZVE"/>
+                        <outlet property="fontStepper" destination="y6t-iN-u5u" id="3go-Yr-BkR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoU-fe-oOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
