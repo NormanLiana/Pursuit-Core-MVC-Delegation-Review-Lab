@@ -55,6 +55,9 @@
                                 <rect key="frame" x="-23" y="-15" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="6QG-xV-P8a" kind="show" id="SAy-9h-lO6"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
