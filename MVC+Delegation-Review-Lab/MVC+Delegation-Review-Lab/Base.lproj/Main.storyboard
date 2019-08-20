@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="178.79464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Font Size View Controller-->
         <scene sceneID="mS1-Ry-9Iw">
             <objects>
-                <viewController id="6QG-xV-P8a" sceneMemberID="viewController">
+                <viewController id="6QG-xV-P8a" customClass="FontSizeViewController" customModule="MVC_Delegation_Review_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AqK-98-n99">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
