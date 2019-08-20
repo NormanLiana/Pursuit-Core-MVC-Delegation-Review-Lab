@@ -49,7 +49,15 @@
                             <outlet property="delegate" destination="Ky1-Xw-xgV" id="Ate-A9-Kep"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="P4X-om-NAz"/>
+                    <navigationItem key="navigationItem" id="P4X-om-NAz">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hEe-nx-Xiq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="olc-JY-6ez">
+                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVW-ae-k5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
