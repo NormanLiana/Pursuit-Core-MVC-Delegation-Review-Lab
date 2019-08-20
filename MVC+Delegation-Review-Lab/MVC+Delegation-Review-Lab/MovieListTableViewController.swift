@@ -11,7 +11,9 @@ import UIKit
 class MovieListTableViewController: UITableViewController {
     
     let movies = Movie.allMovies
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,13 @@ class MovieListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return movies.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        cell.textLabel?.text = movies[indexPath.row].name
+        cell.detailTextLabel?.text = "\(movies[indexPath.row].year)"
+        return cell
     }
 
     /*
