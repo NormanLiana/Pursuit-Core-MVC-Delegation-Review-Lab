@@ -8,9 +8,23 @@
 
 import UIKit
 
-class MovieListTableViewController: UITableViewController {
-    
+protocol fontDelegate {
+    func updateFont(number: CGFloat) 
+}
+
+class MovieListTableViewController: UITableViewController, fontDelegate {
     let movies = Movie.allMovies
+    var updatedSize: CGFloat!
+    
+    
+    
+    func updateFont(number: CGFloat) {
+        updatedSize = number
+        tableView.reloadData()
+    }
+    
+    
+    
     
     
     
@@ -38,10 +52,20 @@ class MovieListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        cell.textLabel?.font = UIFont(name: "Marker Felt", size: updatedSize ?? 17)
+        cell.detailTextLabel?.font = UIFont(name: "Marker Felt", size: updatedSize ?? 17)
         cell.textLabel?.text = movies[indexPath.row].name
         cell.detailTextLabel?.text = "\(movies[indexPath.row].year)"
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? FontSizeViewController else {fatalError()}
+        destination.delegate = self
+        destination.keepFontSize = Float(updatedSize ?? 17)
+    }
+    
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
